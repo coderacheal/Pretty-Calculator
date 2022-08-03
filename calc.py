@@ -1,12 +1,10 @@
 import kivy
 from kivymd.app import MDApp
 from kivy.lang import Builder
-from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.widget import Widget
-from kivy.properties import ObjectProperty
 from kivy.core.window import Window
 from kivymd.theming import ThemeManager
-from numpy import sqrt, square
+from numpy import sqrt
 
 
 # Set app size
