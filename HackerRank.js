@@ -12,7 +12,7 @@ function sockMerchant(n, ar) {
         }
     }
     return thePairs;
-
+}
 
 
 // counting valleys
@@ -48,4 +48,74 @@ function gradingStudents(grades) {
     }
     return grades
     
+}
+
+function gradingStudents(grades) {
+    let best = 0;
+    let worst = 0;
+    let bestScore = scores[0];
+    let worstScore = scores[0];
+    const lengthOfData = scores.length;
+    for(let i = 1; i < scores.length; i++) {
+        if (scores[i] > bestScore) {
+            bestScore = scores[i];
+            best++;
+            continue;
+        }
+        if (scores[i] < worstScore) {
+            worstScore = scores[i]
+            worst++;
+            continue;
+        }
+    }
+    return [best, worst]
+
+}
+
+
+function findDigits(n) {
+    // Write your code here
+    let cnt = 0;
+    let str =n.toString();
+    let arr = str.split('');
+    for( let i = 0; i < arr.length; i++){
+        if(n % Number(arr[i]) ===0){
+            cnt++;
+        }
+    }
+        return cnt;
+}
+
+
+function countApplesAndOranges(s, t, a, b, apples, oranges) {
+    // Write your code here
+    let appleArr = new Array(apples.length).fill(0);
+    let orangeArr = new Array(oranges.length).fill(0);
+    for (let i = 0; i < apples.length; i++) {
+        appleArr[i] = apples[i] + a;
+
+    }
+    for (let i = 0; i < oranges.length; i++) {
+        orangeArr[i] = oranges[i] + b;
+
+    }
+    let appleCount = 0;
+    let orangeCount = 0;
+    for (let i = 0; i < appleArr.length; i++) {
+        if (appleArr[i] >= s && appleArr[i] <= t) {
+            appleCount++
+        } else {
+            appleCount = appleCount
+        }
+    }
+    for (let i = 0; i < orangeArr.length; i++) {
+        if (orangeArr[i] >= s && orangeArr[i] <= t) {
+            orangeCount++;
+        } else {
+            orangeCount = orangeCount
+        }
+
+    }
+    console.log(appleCount);
+    console.log(orangeCount);
 }
